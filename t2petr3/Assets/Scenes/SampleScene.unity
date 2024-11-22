@@ -168,6 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   tileSize: 2
+  _generator: {fileID: 930794085}
+  position: {x: 0, y: 0}
 --- !u!212 &495926357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -374,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261a95fb04d38654a9fa275e671690a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 60
+  bpm: 70
   player: {fileID: 495926356}
 --- !u!82 &531693477
 AudioSource:
@@ -507,6 +509,7 @@ MonoBehaviour:
   spikesPrefab: {fileID: 7429909297704700905, guid: 8acece42451422147946cbac1fc42d56, type: 3}
   finishPrefab: {fileID: 3134802598156628415, guid: 72058eba092aef84fadfaaf4021f3317, type: 3}
   spawnPrefab: {fileID: 8736497274543279925, guid: e566ae1ccfb1b9641af2ed6adc747bc7, type: 3}
+  player: {fileID: 495926356}
   tileSize: 2
 --- !u!4 &930794086
 Transform:
