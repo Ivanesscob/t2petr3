@@ -374,6 +374,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 60
   player: {fileID: 495926356}
+--- !u!1 &930794084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 930794086}
+  - component: {fileID: 930794085}
+  m_Layer: 0
+  m_Name: lvl1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &930794085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930794084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c657545755104b93c4dfa9a9f7c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 2370257464838881063, guid: 082c27df4bf59b840a8c9906ba61ebeb, type: 3}
+  floorPrefab: {fileID: 168835768947604147, guid: 9188c3e35f1e6e84c82c7e0aeb56d903, type: 3}
+  spikesPrefab: {fileID: 7429909297704700905, guid: 8acece42451422147946cbac1fc42d56, type: 3}
+  finishPrefab: {fileID: 3134802598156628415, guid: 72058eba092aef84fadfaaf4021f3317, type: 3}
+  spawnPrefab: {fileID: 8736497274543279925, guid: e566ae1ccfb1b9641af2ed6adc747bc7, type: 3}
+--- !u!4 &930794086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930794084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290718082
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,3 +516,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 531693475}
   - {fileID: 495926355}
+  - {fileID: 930794086}
