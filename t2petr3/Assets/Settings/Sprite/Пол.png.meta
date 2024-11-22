@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3f826349bd4031547abd90a530aa939c
+guid: ef1ac9a821bf4c5489952314c9c87d62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8277207486287674224
-    second: backHero_0
+      213: -4230079377399999617
+    second: "\u041F\u043E\u043B_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backHero_0
+      name: "\u041F\u043E\u043B_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 557
-        height: 933
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07b7160ba5c8ed270800000000000000
-      internalID: 8277207486287674224
+      spriteID: f731e5ad73dbb45c0800000000000000
+      internalID: -4230079377399999617
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      backHero_0: 8277207486287674224
+      "\u041F\u043E\u043B_0": -4230079377399999617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
