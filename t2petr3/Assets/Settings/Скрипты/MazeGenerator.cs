@@ -12,6 +12,8 @@ public class MazeGenerator : MonoBehaviour
     private int height = 15;
     private GameObject[,] map;
 
+    [SerializeField] private float tileSize = 2f;
+
     void Start()
     {
         GenerateMaze();
@@ -46,7 +48,7 @@ public class MazeGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                Vector3 position = new Vector3(x, y, 0);
+                Vector3 position = new Vector3(x * tileSize, y * tileSize, 0);
                 switch (maze[x, y])
                 {
                     case 0:

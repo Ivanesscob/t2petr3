@@ -146,11 +146,12 @@ Transform:
   m_GameObject: {fileID: 495926354}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1290718083}
+  - {fileID: 531693475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &495926356
@@ -353,12 +354,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531693471}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 495926355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &531693476
 MonoBehaviour:
@@ -408,6 +409,7 @@ MonoBehaviour:
   spikesPrefab: {fileID: 7429909297704700905, guid: 8acece42451422147946cbac1fc42d56, type: 3}
   finishPrefab: {fileID: 3134802598156628415, guid: 72058eba092aef84fadfaaf4021f3317, type: 3}
   spawnPrefab: {fileID: 8736497274543279925, guid: e566ae1ccfb1b9641af2ed6adc747bc7, type: 3}
+  tileSize: 2
 --- !u!4 &930794086
 Transform:
   m_ObjectHideFlags: 0
@@ -514,6 +516,5 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 531693475}
   - {fileID: 495926355}
   - {fileID: 930794086}
