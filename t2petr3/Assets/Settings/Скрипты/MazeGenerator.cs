@@ -7,10 +7,13 @@ public class MazeGenerator : MonoBehaviour
     public GameObject spikesPrefab;
     public GameObject finishPrefab;
     public GameObject spawnPrefab;
-
+    [SerializeField] private Player player;
     private int width = 15;
     private int height = 15;
     private GameObject[,] map;
+    public int[,] maze;
+
+    [SerializeField] private float tileSize = 2f;
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class MazeGenerator : MonoBehaviour
         map = new GameObject[width, height];
 
         // Лабиринт 15x15 (ручная настройка)
-        int[,] maze = new int[15, 15]
+        maze = new int[15, 15]
         {
             // 0 - пол, 1 - стена, 2 - шипы, 3 - финиш, 4 - спавн игрока
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
@@ -46,7 +49,7 @@ public class MazeGenerator : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                Vector3 position = new Vector3(x, y, 0);
+                Vector3 position = new Vector3(x * tileSize, y * tileSize, 0);
                 switch (maze[x, y])
                 {
                     case 0:
@@ -63,6 +66,8 @@ public class MazeGenerator : MonoBehaviour
                         break;
                     case 4:
                         Instantiate(spawnPrefab, position, Quaternion.identity);
+                        player.transform.position = position;
+                        player.position = new Vector2Int(x, y);
                         break;
                 }
             }
