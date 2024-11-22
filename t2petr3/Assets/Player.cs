@@ -8,48 +8,38 @@ public class Player : MonoBehaviour
     private bool isMoving = false;
     [SerializeField] private float tileSize;
     private Vector3 _direction;
+    private Vector3 _curDirection;
     private Vector3 _position;
-    void Start()
+    private Vector3 _curPosition;
+    public void Move()
     {
-        
+        isMoving = true;
+        _position = transform.position;
+        _curDirection = _direction;
+        _curPosition = _position;
     }
     void Update()
     {
-        if(!isMoving)
-        {
             if (Input.GetKeyDown(KeyCode.W))
             {
                 _direction = Vector3.up;
-
-                _position = transform.position;
-                isMoving = true;
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
                 _direction = Vector3.down;
-
-                _position = transform.position;
-                isMoving = true;
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
                 _direction = Vector3.left;
-
-                _position = transform.position;
-                isMoving = true;
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 _direction = Vector3.right;
-
-                _position = transform.position;
-                isMoving = true;
             }
-        }
-        else
+        if(isMoving)
         {
-            transform.position += Time.deltaTime * speed * _direction;
-            if(CheckPos(_position, _direction))
+            transform.position += Time.deltaTime * speed * _curDirection;
+            if(CheckPos(_curPosition, _curDirection))
             {
                 isMoving = false;
             }

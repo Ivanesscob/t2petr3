@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 495926354}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 1, y: 1, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a345c81ec98caab4489bfe997ffe9725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 15
   tileSize: 2
 --- !u!212 &495926357
 SpriteRenderer:
@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 531693474}
   - component: {fileID: 531693473}
   - component: {fileID: 531693472}
+  - component: {fileID: 531693476}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -328,7 +329,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -360,6 +361,20 @@ Transform:
   - {fileID: 495926355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531693476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531693471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261a95fb04d38654a9fa275e671690a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 60
+  player: {fileID: 495926356}
 --- !u!1 &1290718082
 GameObject:
   m_ObjectHideFlags: 0
