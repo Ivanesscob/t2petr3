@@ -19,10 +19,11 @@ public class MazeGenerator : MonoBehaviour
 
     public float tileSize = 2f;
 
-    public int currentLevel = 1;
+    public int currentLevel = PlayerPrefs.GetInt("lvl");
     [SerializeField] LevelObstacles[] levels;
     void Start()
     {
+        currentLevel = PlayerPrefs.GetInt("lvl");
         beatManager.generator = this;
         GenerateMaze();
     }
