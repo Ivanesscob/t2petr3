@@ -34,15 +34,24 @@ public class ButtonController : MonoBehaviour
         }
     }
 
+
     public void OnButtonClick()
     {
-     
+
         if (buttonGroup != null)
         {
             buttonGroup.OnButtonSelected(this);
         }
+
         buttonResult = gameObject.name;
-        Debug.Log(buttonResult);
+        Debug.Log("Выбран персонаж: " + buttonResult);
+
+        // Сообщаем SceneSwitcher о том, что персонаж выбран
+        SceneSwitcher sceneSwitcher = FindObjectOfType<SceneSwitcher>();
+        if (sceneSwitcher != null)
+        {
+            sceneSwitcher.isCharacterSelected = true;
+        }
     }
 
     public void SetHighlightedState(bool isHighlighted)
