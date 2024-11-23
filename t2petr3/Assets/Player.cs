@@ -84,11 +84,12 @@ public class Player : MonoBehaviour
         }
         return true;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Spikes spikes))
         {
-            if(spikes.isActive)
+            Debug.Log(isMoving);
+            if (spikes.isActive && isMoving == false)
             {
                 GameOver();
             }
