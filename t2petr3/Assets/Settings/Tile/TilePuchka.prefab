@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9784f8e3d9ea724bad32c2c08d08aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steps: 0100000003000000
+  steps: 0100000005000000
   isActive: 1
   generator: {fileID: 0}
   manager: {fileID: 0}

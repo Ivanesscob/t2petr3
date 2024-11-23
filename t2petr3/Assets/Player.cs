@@ -97,6 +97,17 @@ public class Player : MonoBehaviour
                 GameOver();
             }
         }
+        else
+        {
+            if (collision.TryGetComponent(out Bullet bullet))
+            {
+
+                if (isMoving == false)
+                {
+                    GameOver();
+                }
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

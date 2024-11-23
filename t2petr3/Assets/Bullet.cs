@@ -16,6 +16,8 @@ public class Bullet : MonoBehaviour
     private Vector3 _curPosition;
     [SerializeField] private MazeGenerator _generator;
     [HideInInspector] public Vector2Int position;
+    static int globalId = 0;
+    int id = 0;
     private bool CheckWall(Vector2Int nextPos)
     {
         if (maze[nextPos.x, nextPos.y] == 1)
@@ -29,7 +31,9 @@ public class Bullet : MonoBehaviour
         if (!CheckWall(position))
         {
             manager.bullets.Remove(this);
+            gameObject.SetActive(false);
             Destroy(gameObject);
+            return;
         }
         _position = transform.position;
         _curDirection = direction;
@@ -79,6 +83,8 @@ public class Bullet : MonoBehaviour
         this.maze = maze;
         this.manager = manager;
         manager.bullets.Add(this);
+        globalId++;
+        id = globalId;
     }
 
 }
