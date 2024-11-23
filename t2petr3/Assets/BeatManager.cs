@@ -1,4 +1,5 @@
-using NUnit.Framework.Internal;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BeatManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class BeatManager : MonoBehaviour
     private float startTime;
     private float time;
     [HideInInspector] public LevelObstacles level;
+    [HideInInspector] public MazeGenerator generator;
+    [HideInInspector] public List<Bullet> bullets = new List<Bullet>();
     void Start()
     {
         startTime = 1 / bpm * 60;
@@ -28,6 +31,8 @@ public class BeatManager : MonoBehaviour
         foreach(SpecialTile tile in level.tiles)
         {
             tile.Action();
+            tile.manager = this;
+            tile.generator = generator;
         }
     }
 }
