@@ -23,6 +23,7 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] LevelObstacles[] levels;
     void Start()
     {
+        beatManager.generator = this;
         GenerateMaze();
     }
 

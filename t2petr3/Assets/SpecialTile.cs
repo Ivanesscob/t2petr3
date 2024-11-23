@@ -6,6 +6,8 @@ public abstract class SpecialTile : MonoBehaviour
     protected int state = 0;
     protected int currentStep;
     public bool isActive = false;
+    [HideInInspector] public MazeGenerator generator;
+    [HideInInspector] public BeatManager manager;
     public void Action()
     {
         currentStep++;
