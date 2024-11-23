@@ -86,9 +86,10 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        Debug.Log(isMoving);
         if (collision.TryGetComponent(out Spikes spikes))
         {
-            Debug.Log(isMoving);
+            
             if (spikes.isActive && isMoving == false)
             {
                 GameOver();
