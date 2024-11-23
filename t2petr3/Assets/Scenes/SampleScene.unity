@@ -473,7 +473,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 531693475}
@@ -497,6 +497,9 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   winScreen: {fileID: 1841466163}
   loseScreen: {fileID: 1554575646}
+  sprite: {fileID: 7452053510398645580, guid: fcb8888f1953b4144b25b0807b26bc39, type: 3}
+  sprite2: {fileID: 7143586373401363173, guid: 4bd965796a3bf1f448e4dd14302de485, type: 3}
+  sr: {fileID: 495926357}
 --- !u!212 &495926357
 SpriteRenderer:
   m_ObjectHideFlags: 0
