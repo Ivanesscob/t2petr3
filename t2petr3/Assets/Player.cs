@@ -63,11 +63,13 @@ public class Player : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.A))
             {
                 _direction = Vector3Int.left;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
                 _direction = Vector3Int.right;
-            }
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1);
+        }
         if(isMoving)
         {
             transform.position += Time.deltaTime * speed * (Vector3)_curDirection;
