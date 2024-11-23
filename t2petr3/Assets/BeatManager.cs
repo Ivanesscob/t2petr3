@@ -31,8 +31,6 @@ public class BeatManager : MonoBehaviour
         foreach(SpecialTile tile in level.tiles)
         {
             tile.Action();
-            tile.manager = this;
-            tile.generator = generator;
         }
     }
 }

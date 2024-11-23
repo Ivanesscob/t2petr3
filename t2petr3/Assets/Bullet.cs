@@ -72,7 +72,7 @@ public class Bullet : MonoBehaviour
         }
         return false;
     }
-    public Bullet(Vector3Int direction, float speed, int[,] maze, BeatManager manager)
+    public void BulletFill(Vector3Int direction, float speed, int[,] maze, BeatManager manager)
     {
         this.direction = direction;
         this.speed = speed;

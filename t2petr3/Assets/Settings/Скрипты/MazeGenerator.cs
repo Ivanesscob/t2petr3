@@ -47,6 +47,11 @@ public class MazeGenerator : MonoBehaviour
         }
         LevelObstacles level = Instantiate(levels[currentLevel - 1], new Vector2(0, 0), Quaternion.identity);
         beatManager.level = level;
+        foreach(SpecialTile tile in level.tiles)
+        {
+                tile.manager = beatManager;
+                tile.generator = this;
+        }
         // Выбор уровня
         if (currentLevel == 1)
         {

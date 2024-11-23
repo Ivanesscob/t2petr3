@@ -7,8 +7,8 @@ public class Cannon : SpecialTile
     [SerializeField] Bullet bullet;
     public override void DoAction()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity);
-        bullet = new Bullet(direction, speed, generator.maze, manager);
+        Bullet newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.BulletFill(direction, speed, generator.maze, manager);
     }
     public override void DoOther()
     {
