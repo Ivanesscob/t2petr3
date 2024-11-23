@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
     BeatManager manager;
 
     [SerializeField] private float tileSize;
-    private Vector3Int _direction;
     private Vector3Int _curDirection;
     private Vector3 _position;
     private Vector3 _curPosition;
@@ -27,13 +26,15 @@ public class Bullet : MonoBehaviour
     }
     public void Move()
     {
+        if (!CheckWall(position))
+        {
+            manager.bullets.Remove(this);
+            Destroy(gameObject);
+        }
         _position = transform.position;
         _curDirection = direction;
         _curPosition = _position;
-        if (CheckWall(position + new Vector2Int(_curDirection.x, _curDirection.y)))
-        {
             isMoving = true;
-        }
     }
     void Update()
     {
@@ -77,7 +78,7 @@ public class Bullet : MonoBehaviour
         this.speed = speed;
         this.maze = maze;
         this.manager = manager;
-
+        manager.bullets.Add(this);
     }
 
 }
