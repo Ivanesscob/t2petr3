@@ -10,7 +10,7 @@ public class MazeGenerator : MonoBehaviour
     public GameObject spawnPrefab;
     public GameObject turretPrefab; // Новый префаб для пушек
     [SerializeField] private Player player;
-
+    [SerializeField] private BeatManager beatManager;
     private int width = 0;
     private int height = 0;
 
@@ -20,7 +20,7 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] private float tileSize = 2f;
 
     public int currentLevel = 1; // Переменная для выбора уровня
-
+    [SerializeField] LevelObstacles[] levels;
     void Start()
     {
         GenerateMaze();
@@ -44,7 +44,8 @@ public class MazeGenerator : MonoBehaviour
             width = 30;
             height = 30;
         }
-
+        LevelObstacles level = Instantiate(levels[currentLevel - 1], new Vector2(width / 2 * tileSize, height / 2 * tileSize), Quaternion.identity);
+        beatManager.level = level;
         // Выбор уровня
         if (currentLevel == 1)
         {
