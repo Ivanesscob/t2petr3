@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    // Флаг, указывающий, выбран ли персонаж
+    
     public bool isCharacterSelected = false;
 
     public void LoadNextScene()
@@ -11,7 +11,7 @@ public class SceneSwitcher : MonoBehaviour
         if (!isCharacterSelected)
         {
             Debug.Log("Персонаж не выбран! Сцена не будет переключена.");
-            return; // Не переключаем сцену, если персонаж не выбран
+            return;
         }
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -20,11 +20,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        if (!isCharacterSelected)
-        {
-            Debug.Log("Персонаж не выбран! Сцена не будет переключена.");
-            return; // Не переключаем сцену, если персонаж не выбран
-        }
+        
 
         PlayerPrefs.SetInt("lvl", level);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
