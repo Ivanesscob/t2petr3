@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Cannon : SpecialTile
 {
-    [SerializeField] Vector2Int direction;
+    [SerializeField] Vector3Int direction;
     [SerializeField] float speed;
     [SerializeField] Bullet bullet;
     public override void DoAction()
