@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public Vector2Int position;
     private bool CheckWall(Vector2Int nextPos)
     {
-        if (_generator.maze[nextPos.x, nextPos.y] == 1)
+        if (maze[nextPos.x, nextPos.y] == 1)
         {
             return false;
         }

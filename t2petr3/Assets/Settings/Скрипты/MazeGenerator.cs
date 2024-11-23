@@ -3,23 +3,23 @@ using UnityEngine;
 
 public class MazeGenerator : MonoBehaviour
 {
-    public GameObject wallPrefab;
-    public GameObject floorPrefab;
-    public GameObject spikesPrefab;
-    public GameObject finishPrefab;
-    public GameObject spawnPrefab;
-    public GameObject turretPrefab; // Новый префаб для пушек
+    [SerializeField] private GameObject wallPrefab;
+    [SerializeField] private GameObject floorPrefab;
+    [SerializeField] private GameObject spikesPrefab;
+    [SerializeField] private GameObject finishPrefab;
+    [SerializeField] private GameObject spawnPrefab;
+    [SerializeField] private GameObject turretPrefab;
     [SerializeField] private Player player;
     [SerializeField] private BeatManager beatManager;
     private int width = 0;
     private int height = 0;
 
     private GameObject[,] map;
-    public int[,] maze;
+    [HideInInspector] public int[,] maze;
 
-    [SerializeField] private float tileSize = 2f;
+    public float tileSize = 2f;
 
-    public int currentLevel = 1; // Переменная для выбора уровня
+    public int currentLevel = 1;
     [SerializeField] LevelObstacles[] levels;
     void Start()
     {
