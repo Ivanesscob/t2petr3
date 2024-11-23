@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
@@ -643,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
@@ -983,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
@@ -1153,7 +1153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
@@ -1238,7 +1238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
@@ -1408,7 +1408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9120259178313193808, guid: 8acece42451422147946cbac1fc42d56, type: 3}
       propertyPath: 'steps.Array.data[0]'
