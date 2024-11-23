@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -82,5 +83,19 @@ public class Player : MonoBehaviour
             return false;
         }
         return true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Spikes spikes))
+        {
+            if(spikes.enabled)
+            {
+                GameOver();
+            }
+        }
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
