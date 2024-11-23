@@ -7,6 +7,7 @@ public class BeatManager : MonoBehaviour
     [SerializeField] private Player player;
     private float startTime;
     private float time;
+    [HideInInspector] public LevelObstacles level;
     void Start()
     {
         startTime = 1 / bpm * 60;
@@ -24,5 +25,9 @@ public class BeatManager : MonoBehaviour
     void Action()
     {
         player.Move();
+        foreach(SpecialTile tile in level.tiles)
+        {
+            tile.Action();
+        }
     }
 }

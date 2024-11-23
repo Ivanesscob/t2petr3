@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
     {
         if (collision.TryGetComponent(out Spikes spikes))
         {
-            if(spikes.enabled)
+            if(spikes.isActive)
             {
                 GameOver();
             }

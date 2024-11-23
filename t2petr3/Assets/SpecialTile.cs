@@ -5,14 +5,18 @@ public abstract class SpecialTile : MonoBehaviour
     [SerializeField] protected int[] steps;
     protected int state = 0;
     protected int currentStep;
-    protected bool isActive = false;
+    public bool isActive = false;
     public void Action()
     {
         currentStep++;
-        if (currentStep > steps[state])
+        if (currentStep >= steps[state])
         {
             currentStep = 0;
             state++;
+            if (state >= steps.Length)
+            {
+                state = 0;
+            }
             if (isActive)
             {
                 isActive = false;
@@ -20,10 +24,6 @@ public abstract class SpecialTile : MonoBehaviour
             else
             {
                 isActive = true;
-            }
-            if (state >= steps.Length)
-            {
-                state = 0;
             }
         }
         if(isActive)
