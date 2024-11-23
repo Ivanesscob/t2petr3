@@ -32,5 +32,9 @@ public class BeatManager : MonoBehaviour
         {
             tile.Action();
         }
+        for(int i = 0; i < bullets.Count; i++)
+        {
+            bullets[i].Move();
+        }
     }
 }
