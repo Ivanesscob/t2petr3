@@ -19,7 +19,7 @@ public class MazeGenerator : MonoBehaviour
 
     public float tileSize = 2f;
 
-    public int currentLevel = PlayerPrefs.GetInt("lvl");
+    public int currentLevel;
     [SerializeField] LevelObstacles[] levels;
     void Start()
     {
