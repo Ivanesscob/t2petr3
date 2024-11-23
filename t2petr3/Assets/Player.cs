@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private Vector3 _curPosition;
     [SerializeField] private MazeGenerator _generator;
     [HideInInspector] public Vector2Int position;
+    [SerializeField] public Canvas winScreen;
+    [SerializeField] public Canvas loseScreen;
     public void Move()
     {
         _position = transform.position;
@@ -96,8 +98,19 @@ public class Player : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Finish"))
+        {
+            Win();
+        }
+    }
     public void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        loseScreen.gameObject.SetActive(true);
+    }
+    public void Win()
+    {
+        winScreen.gameObject.SetActive(true);
     }
 }

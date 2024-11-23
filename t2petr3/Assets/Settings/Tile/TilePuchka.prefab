@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9784f8e3d9ea724bad32c2c08d08aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steps: 0100000001000000
-  isActive: 0
+  steps: 0100000003000000
+  isActive: 1
   generator: {fileID: 0}
   manager: {fileID: 0}
   direction: {x: 1, y: 0, z: 0}
   speed: 15
-  bullet: {fileID: 7267034988308348430, guid: b863ff698c312f042bbac19214a0da1d, type: 3}
+  bullet: {fileID: 7419174418711123872, guid: 948df8722488aac46ae05ba193e00a1f, type: 3}
