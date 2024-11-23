@@ -589,9 +589,10 @@ MonoBehaviour:
   player: {fileID: 495926356}
   beatManager: {fileID: 531693476}
   tileSize: 2
-  currentLevel: 1
+  currentLevel: 2
   levels:
   - {fileID: 2987581917774419212, guid: 645b9fad1c1fab2498b2fe98b319b963, type: 3}
+  - {fileID: 2987581917774419212, guid: a92ce08f6b877cb4da10e35fe8bcfcfc, type: 3}
 --- !u!4 &930794086
 Transform:
   m_ObjectHideFlags: 0

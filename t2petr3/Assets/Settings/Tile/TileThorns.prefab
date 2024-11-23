@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steps: 0100000001000000
   isActive: 0
-  enabledSprite: {fileID: -7969141587396867726, guid: 27a137c79dda3e742809d2db5ebc74ea, type: 3}
+  enabledSprite: {fileID: -6748027846789529526, guid: 9ac037e76936da74eac36f7439a1c550, type: 3}
   disabledSprite: {fileID: 6653821697917214622, guid: 4ccd2cfa962ace1489b5464e66a1e3c2, type: 3}
   spriteRenderer: {fileID: 2767144844749523061}
   collider: {fileID: 7351740981335302600}
