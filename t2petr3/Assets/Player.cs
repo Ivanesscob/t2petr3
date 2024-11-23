@@ -16,6 +16,30 @@ public class Player : MonoBehaviour
     [HideInInspector] public Vector2Int position;
     [SerializeField] public Canvas winScreen;
     [SerializeField] public Canvas loseScreen;
+    [SerializeField] private Sprite sprite;
+    [SerializeField] private Sprite sprite2;
+    [SerializeField] private SpriteRenderer sr;
+    public void Start()
+    {
+        switch(PlayerPrefs.GetInt("Hero"))
+        {
+            case 1:
+                {
+                    sr.sprite = sprite;
+                    break;
+                }
+            case 2:
+                {
+                    sr.sprite = sprite2;
+                    break;
+                }
+            default:
+                {
+                    sr.sprite = sprite;
+                    break;
+                }
+        }
+    }
     public void Move()
     {
         _position = transform.position;

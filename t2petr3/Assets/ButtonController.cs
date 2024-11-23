@@ -54,6 +54,11 @@ public class ButtonController : MonoBehaviour
         }
     }
 
+    public void SelectHero(int index)
+    {
+        PlayerPrefs.SetInt("Hero", index);
+    }
+
     public void SetHighlightedState(bool isHighlighted)
     {
        
