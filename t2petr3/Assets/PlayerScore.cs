@@ -1,8 +1,8 @@
 [System.Serializable]
 public class PlayerScore
 {
-    public string playerName; // Имя игрока
-    public int score;         // Очки игрока
+    public string playerName;
+    public int score;
 
     public PlayerScore(string name, int score)
     {
